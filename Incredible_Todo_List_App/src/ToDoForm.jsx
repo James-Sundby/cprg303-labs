@@ -3,10 +3,12 @@ import {View, TextInput, Button, StyleSheet} from 'react-native';
 
 function ToDoForm() {
   return (
-    <View style={styles.form}>
-      <TextInput style={styles.input} placeholder="Add a new task..." />
-      <Button title="Add" />
-    </View>
+    <>
+      <View style={styles.form}>
+        <TextInput style={styles.input} placeholder="Add a new task..." />
+        <Button title="Add" />
+      </View>
+    </>
   );
 }
 
