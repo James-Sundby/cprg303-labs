@@ -16,7 +16,7 @@ function Home({navigation}) {
       <MainLayout>
         <SafeAreaView>
           <ToDoList tasks={tasks} />
-          <ToDoForm onAddTask={handleAddTask} />{' '}
+          <ToDoForm onAddTask={handleAddTask} />
           <Button
             title="Go to About"
             onPress={() => navigation.navigate('About')}

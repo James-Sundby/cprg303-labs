@@ -9,11 +9,11 @@ function About({navigation}) {
         <View>
           <Text>James' Incredible To Do List App</Text>
           <Text>Created by: James</Text>
-          <Text>Version 0.1.5</Text>
+          <Text>Version 0.1.58666</Text>
         </View>
         <Button
-          title="Go to About"
-          onPress={() => navigation.navigate('About')}
+          title="Go to Home"
+          onPress={() => navigation.navigate('Home')}
         />
       </MainLayout>
     </>
