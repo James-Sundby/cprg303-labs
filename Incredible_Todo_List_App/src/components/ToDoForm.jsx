@@ -4,6 +4,11 @@ import {View, TextInput, Button, StyleSheet} from 'react-native';
 function ToDoForm({onAddTask}) {
   const [taskText, setTaskText] = React.useState('');
 
+  const handleAddTask = event => {
+    onAddTask(taskText);
+    setTaskText('');
+  };
+
   return (
     <>
       <View style={styles.form}>
@@ -13,7 +18,7 @@ function ToDoForm({onAddTask}) {
           onChangeText={text => setTaskText(text)}
           value={taskText}
         />
-        <Button title="Add" onPress={() => onAddTask(taskText)} />
+        <Button title="Add" onPress={() => handleAddTask()} />
       </View>
     </>
   );
