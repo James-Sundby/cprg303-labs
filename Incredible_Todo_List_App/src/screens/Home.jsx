@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import {SafeAreaView, Button} from 'react-native';
+import {SafeAreaView, Button, View, StyleSheet} from 'react-native';
 
 import MainLayout from '../layouts/MainLayout';
+import Footer from '../layouts/Footer';
 
 import ToDoList from '../components/ToDoList';
 import ToDoForm from '../components/ToDoForm';
@@ -15,16 +16,25 @@ function Home({navigation}) {
     <>
       <MainLayout>
         <SafeAreaView>
-          <ToDoList tasks={tasks} />
-          <ToDoForm onAddTask={handleAddTask} />
+          <View style={styles.container}>
+            <ToDoList tasks={tasks} />
+            <ToDoForm onAddTask={handleAddTask} />
+          </View>
           <Button
             title="Go to About"
             onPress={() => navigation.navigate('About')}
           />
         </SafeAreaView>
       </MainLayout>
+      <Footer />
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    paddingBottom: 20,
+  },
+});
 
 export default Home;
