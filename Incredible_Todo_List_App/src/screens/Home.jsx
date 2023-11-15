@@ -7,6 +7,8 @@ import Footer from '../layouts/Footer';
 import ToDoList from '../components/ToDoList';
 import ToDoForm from '../components/ToDoForm';
 
+import ChuckNorrisFact from '../components/ChuckNorrisFact';
+
 function Home({navigation}) {
   const [tasks, setTasks] = useState(['Do laundry', 'Go to gym', 'Walk dog']);
   const handleAddTask = task => {
@@ -24,6 +26,7 @@ function Home({navigation}) {
             title="Go to About"
             onPress={() => navigation.navigate('About')}
           />
+          <ChuckNorrisFact />
         </SafeAreaView>
       </MainLayout>
       <Footer />
